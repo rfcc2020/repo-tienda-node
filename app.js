@@ -1,7 +1,7 @@
 const express = require('express');
 const axion = require('axios');
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;//para subir en azure port caso contrario port 3000
 
 app.set('view engine', 'ejs');
 app.set('views', './views');
