@@ -1,0 +1,13 @@
+name: Create Azure Resources and Deploy App
+
+on:
+  workflow_dispatch;
+
+jobs:
+  create:
+    runs-on: ubuntu-latest
+
+    steps:
+      name: Login to Azure
+      uses
+        
