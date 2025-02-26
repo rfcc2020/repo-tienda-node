@@ -15,6 +15,6 @@ jobs:
 
     - name: Create Azure Resources
       run: |
-        az group create --name ${{ env.RESOURCE_GROUP }} --location ${{ env.LOCATION }}
-        az appservice plan create --name ${{ env.PLAN_NAME }} --resource-group ${{ env.RESOURCE_GROUP }} --sku F1 --is-linux
-        az webapp create --resource-group ${{ env.RESOURCE_GROUP }} --plan ${{ env.PLAN_NAME }} --name ${{ env.APP_NAME }} --runtime "NODE|20-lts" --startup-file "npm start"
+        az group create --name ${{ vars.RESOURCE_GROUP }} --location ${{ vars.LOCATION }}
+        az appservice plan create --name ${{ vars.PLAN_NAME }} --resource-group ${{ vars.RESOURCE_GROUP }} --sku F1 --is-linux
+        az webapp create --resource-group ${{ vars.RESOURCE_GROUP }} --plan ${{ vars.PLAN_NAME }} --name ${{ vars.APP_NAME }} --runtime "NODE|20-lts" --startup-file "npm start"
