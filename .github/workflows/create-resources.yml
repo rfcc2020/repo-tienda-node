@@ -8,11 +8,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Login to Azure
-      uses: azure/login@v1
-      with:
-        creds: ${{ secrets.AZURE_CREDENTIALS }}
-
     - name: Create Azure Resources
       run: |
         az group create --name ${{ env.RESOURCE_GROUP }} --location ${{ env.LOCATION }}
